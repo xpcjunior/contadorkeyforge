@@ -1,0 +1,131 @@
+#:kivy 1.0
+<SettingsScreen>:
+    GridLayout:
+        cols: 1
+        padding: 30
+        GridLayout:
+            cols: 1
+            padding: 20
+            GridLayout:
+                cols: 1
+                Label:
+                    text: "Corrente"
+                Label:
+                    id: lb_qtd_cartas
+                    text: "(6 Cartas)"
+            GridLayout:
+                cols: 3
+                Button:
+                    text: "-"
+                    on_press: app.diminuir_corrente()
+                    size: 50, 50
+                    size_hint: None, None
+                Label:
+                    id: lb_qtd_corrente
+                    text: "0"
+                    font_size: 32
+                Button:
+                    text: "+"
+                    on_press: app.aumentar_corrente()
+                    size: 50, 50
+                    size_hint: None, None
+        GridLayout:
+            cols: 1
+            padding: 20
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Image:
+                    id: chavecambarimg
+                    source: "imagens/chave_c_ambar.png"
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Label:
+                    text: "Æmbar para forjar"
+            GridLayout:
+                cols: 3
+                Button:
+                    text: "-"
+                    on_press: app.diminuir_aembar_para_forjar()
+                    size: 50, 50
+                    size_hint: None, None
+                Label:
+                    id: lb_qtd_aembar_para_forjar
+                    text: "6"
+                    font_size: 32
+                Button:
+                    text: "+"
+                    on_press: app.aumentar_aembar_para_forjar()
+                    size: 50, 50
+                    size_hint: None, None
+        GridLayout:
+            cols: 1
+            padding: 20
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Image:
+                    id: ambarimg
+                    source: "imagens/ambar.png"
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Label:
+                    text: "Æmbar"
+            GridLayout:
+                cols: 3
+                Button:
+                    text: "-"
+                    on_press: app.diminuir_aembar()
+                    size: 50, 50
+                    size_hint: None, None
+                Label:
+                    id: lb_qtd_aembar
+                    text: "0"
+                    font_size: 32
+                Button:
+                    text: "+"
+                    on_press: app.aumentar_aembar()
+                    size: 50, 50
+                    size_hint: None, None
+        GridLayout:
+            cols: 1
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Button:
+                    text: "Forjar chave"
+                    on_press: app.forjar_chave()
+                    size: 110, 50
+                    size_hint: None, None
+            GridLayout
+                cols: 3
+                Image:
+                    id: chave1
+                    source: "imagens/chave_amarela-n_forjada.png"
+                Image:
+                    id: chave2
+                    source: "imagens/chave_amarela-n_forjada.png"
+                Image:
+                    id: chave3
+                    source: "imagens/chave_amarela-n_forjada.png"
+        GridLayout:
+            cols: 2
+            padding: 30
+            AnchorLayout:
+                anchor_x: 'left'
+                anchor_y: 'center'
+                Button:
+                    text: "Resetar"
+                    on_press: app.resetar()
+                    size: 110, 50
+                    size_hint: None, None
+            AnchorLayout:
+                anchor_x: 'right'
+                anchor_y: 'center'
+                Button:
+                    text: "Voltar"
+                    on_press: app.bt_voltar_handler()
+                    size: 110, 50
+                    size_hint: None, None

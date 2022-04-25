@@ -1,0 +1,16 @@
+#:kivy 1.0
+<MenuScreen>:
+    GridLayout
+        cols: 1
+        padding: 180
+        Button:
+            text: "1 Jogador"
+            on_press: app.mudar_tela("settings")
+        Button:
+            text: "2 Jogadores"
+            on_press: app.mudar_tela("doisjogadores")
+        Button:
+            text: "Preferências"
+        Button:
+            text:"Sair"
+            on_press: app.Exit()
